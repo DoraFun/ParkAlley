@@ -1326,13 +1326,17 @@ transparent;
   letter-spacing: 0;
   position: absolute;
   
-  margin: 18px 36px 18px 58px ;
+  left: 38px;
+  top: 18px;
+
+  margin: 0;
+
   white-space: nowrap;
 
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 23px;
+  font-size: 18px;
   line-height: 27px;
 
   font-variant: small-caps;
