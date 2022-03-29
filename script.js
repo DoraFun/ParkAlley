@@ -4,6 +4,8 @@ arrowRight = document.getElementById('arrow_right')
 switchImg = document.getElementById('switch_img')
 switchHeader = document.getElementById('switch_header')
 switchText = document.getElementById('switch_text')
+switchNumber = document.getElementById('switch_number')
+
 
 backview = {
   img: './img/backview.png',
@@ -46,17 +48,20 @@ const updateSwitchContainer = () => {
   switchImg.src = switchArr[current].img
   switchHeader.innerHTML = switchArr[current].header
   switchText.innerHTML = switchArr[current].text
+  switchNumber.innerHTML = `0${current + 1}`
 }
 
 const toLeft = () => {
-  if (current === 0) return
-  current -= 1
+  if (current === 0) current = switchArr.length - 1
+  else current -= 1
+  
   updateSwitchContainer()
 }
 
 const toRight = () => {
-  if (current === 4) return
-  current += 1
+  if (current === 4) current = 0
+  else current += 1
+
   updateSwitchContainer()
 }
 

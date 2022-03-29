@@ -18,6 +18,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
+button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 .osnova {
 
   align-items: flex-end;
@@ -1277,14 +1284,32 @@ transparent;
   width: 44px;
 }
 
-.text-51 {
+.gallery_cont-aside {
+  position: absolute;
+
   left: 1181px;
+}
+
+.text-51 {
+  position: relative;
   letter-spacing: 0;
   line-height: 40.5px;
-  position: absolute;
-  top: 0;
   white-space: nowrap;
   width: 253px;
+
+  margin-bottom: 30px;
+}
+
+.text-511 {
+  position: absolute;
+  overflow: visible;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 34.5px;
+  color: #FFFFFF;
+  width: 384px;
+  clear: left;
 }
 
 .overlap-group-container {
