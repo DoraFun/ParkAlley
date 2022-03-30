@@ -82,7 +82,7 @@ gallery = document.getElementById('gallery')
 
 const galleryNewWidth = bodyWidth * 0.50 
 
-gallery.style.width = galleryNewWidth + 'px'
+//gallery.style.width = galleryNewWidth + 'px'
 
 popup1Block = document.getElementById('popup_1_block')
 popup2Block = document.getElementById('popup_2_block')
