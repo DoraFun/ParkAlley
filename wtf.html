@@ -28,7 +28,7 @@
       <li class="text-2-1"><a class="link 2" href="#">галерея</a></li>
       <li class="text-3-1"><a class="link 3" href="#">преимущества</a></li>
       <li class="overlap-group14">
-        <div class="phone-1"> <a class="phone-num" href="tel:+89009008070">8 900 900 80 -70</a> </div>
+        <div id="num1" class="phone-1"> <a class="phone-num" href="tel:+89009008070">8 900 900 80 -70</a> </div>
       </li>
     </nav>
 
@@ -44,7 +44,7 @@
             МЕСТО, <br />КУДА СТОИТ <br />ИНВЕСТИРОВАТЬ
           </h1>
 
-          <button class="rectangle-5">
+          <button id="btn_main" class="rectangle-5">
             <p class="text-38 ">
               ПОДОБРАТЬ НЕДВИЖИМОСТЬ</p>
           </button>
@@ -330,12 +330,12 @@
         <div class="number-5">04</div>
         <div class="ap-2">AP</div>
         <div class="ap-3">AP</div>
-        <div class="text-55">ПРОДАЖА ИНВЕСТИЦИЙ</div>
+        <div id="bottom" class="text-55">ПРОДАЖА ИНВЕСТИЦИЙ</div>
         <div class="text-56 montserrat-light-fuscous-gray-29px">Контакты</div>
         <div class="text-57 montserrat-light-fuscous-gray-29px">Аллея Парк</div>
         <div class="text-58 montserrat-light-hillary-29px">Сочи, р. Дагомыс</div>
         <div class="text-59 montserrat-light-hillary-29px">ЖК «Аллея Парк»</div>
-        <div class="phone-7">8 900 900 80 -70</div>
+        <a id="num2" class="phone-7" style="cursor: pointer;">8 900 900 80 -70</a>
         <div class="text-60">Телефон</div>
         <div class="text-61 montserrat-thin-black-19px">преимущества</div>
         <div class="text-62 montserrat-thin-black-19px">цифры</div>
@@ -343,7 +343,56 @@
       </footer>
 
     </div>
-  </div>
+  </main>
+
+  <!-- попапы, они имею абсолютную позицию на весь экроан, поэтому существуют вне osnovы -->
+  <!-- если нужно будет убрать попап2 из темного слоя сзади просто вытащи его отсюда и создай новый контейнер рядом с этим -->
+  <section id="popup_1" class="popup_1-container" style="visibility: hidden;">
+    <div style="visibility: hidden;" id="popup_1_block" class="popup_1-block">
+      <aside class="aside-1">
+        <img src="img/popup-1.png" alt="">
+      </aside>
+
+      <aside class="aside-2">
+        <div class="popup_1_text-1">Готовы<br />инвестировать?</div>
+        <div class="popup_1_text-2">Оставьте заявку и мы свяжемся<br />с Вами в течении 10 минут</div>
+
+        <form class="popup_1-form" action="">
+          <div class="popup_1-info-form-cont" style="margin-bottom: 17.17px;">
+            <label class="popup_1-label" for="">Ваше имя</label>
+            <input class="popup_1-input" placeholder="Никита" type="text">
+          </div>
+
+          <div class="popup_1-info-form-cont" style="margin-bottom: 22.26px;">
+            <label class="popup_1-label" for="">Ваш номер телефона</label>
+            <input class="popup_1-input" placeholder="+7 (988) 800 70-60" type="text">
+          </div>
+
+          <button class="popup_1-btn">Оставить заявку</button>
+          
+          <div class="popup_1-cond">Нажимая на кнопку, вы принимаете<br />условия <span style="color: #00a150;">передачи данных</span></div>
+        </form>
+      </aside>
+    </div>
+
+    <div style="visibility: hidden;" id="popup_2_block" class="popup_2-block">
+      <aside class="popup_2-aside-1">
+        <div class="popup_2-text-1">Заказать звонок.</div>
+        <div class="popup_2-text-2">Оставьте номер телефона и мы свяжемся с Вами в течении 10 минут</div>
+      </aside>
+
+      <aside class="popup_2-aside-2">
+        <div class="popup_2-text-3">Ваш номер телефона</div>
+        <div class="popup_1-cond popup_2-text-4">Нажимая на кнопку, вы принимаете<br />условия <span style="color: #00a150;">передачи данных</span></div>
+        <form class="popup_2-form">
+          <input class="popup_1-input" placeholder="+7 (988) 800 70-60" type="text">
+
+          <button class="popup_1-btn">Оставить заявку</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
 </body>
 
 </html>

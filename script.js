@@ -72,11 +72,70 @@ arrowRight.addEventListener('click', toRight)
 
 body = document.getElementById('body')
 bodyWidth = body.offsetWidth
+bodyHeight = body.offsetHeight
 
-console.log(bodyWidth)
+popup1 = document.getElementById('popup_1')
+popup1.style.width = bodyWidth + 'px'
+popup1.style.height = bodyHeight + 'px'
 
 gallery = document.getElementById('gallery')
 
 const galleryNewWidth = bodyWidth * 0.50 
 
 gallery.style.width = galleryNewWidth + 'px'
+
+popup1Block = document.getElementById('popup_1_block')
+popup2Block = document.getElementById('popup_2_block')
+
+document.addEventListener('keydown', e => {
+  if (e.code === 'Escape') {
+    popup1.style.visibility = 'hidden';
+    popup1Block.style.visibility = 'hidden';
+    popup2Block.style.visibility = 'hidden';
+  }
+})
+
+btnMain = document.getElementById('btn_main')
+
+btnMain.addEventListener('click', () => {
+  popup1.style.visibility = 'visible';
+  popup1Block.style.visibility = 'visible';
+  popup2Block.style.visibility = 'hidden';
+})
+
+
+function childOf(c,p){while((c=c.parentNode)&&c!==p);return !!c}
+
+popup1.addEventListener('click', (e) => {
+  if (childOf(popup1Block, e.target)) {
+    popup1.style.visibility = 'hidden';
+    popup1Block.style.visibility = 'hidden';
+    popup2Block.style.visibility = 'hidden';
+  }
+})
+
+
+
+window.addEventListener('scroll', e => {
+  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) 
+  {
+    popup1.style.visibility = 'visible';
+    popup1Block.style.visibility = 'visible';
+    popup2Block.style.visibility = 'hidden';
+  }
+})
+
+num1 = document.getElementById('num1')
+num2 = document.getElementById('num2')
+
+num1.addEventListener('click', e => {
+  popup1.style.visibility = 'visible';
+  popup1Block.style.visibility = 'hidden';
+  popup2Block.style.visibility = 'visible';
+})
+
+num2.addEventListener('click', e => {
+  popup1.style.visibility = 'visible';
+  popup1Block.style.visibility = 'hidden';
+  popup2Block.style.visibility = 'visible';
+})

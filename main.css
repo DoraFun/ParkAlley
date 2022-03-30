@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:700,600|Montserrat:100,300,600|Roboto:400,700,300,500,600,100|Rosarivo:400");
 @import url(variables.css);
+@import url(popup.css);
 body{
     background-color: #565656;
     
