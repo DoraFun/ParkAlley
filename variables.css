@@ -128,7 +128,7 @@ rgba(255, 255, 255, 1);
   color: var(--black);
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-s);
-  font-weight: 100;
+  font-weight: 250;
   font-style: normal;
 }
 .roboto-medium-white-26px {
@@ -190,7 +190,7 @@ rgba(255, 255, 255, 1);
   color: var(--white);
   font-family: var(--font-family-roboto);
   font-size: 18px;
-  font-weight: 300;
+  font-weight: lighter;
   font-style: normal;
 }
 .montserrat-light-white-38px {
