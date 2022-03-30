@@ -68,3 +68,15 @@ const toRight = () => {
 
 arrowLeft.addEventListener('click', toLeft)
 arrowRight.addEventListener('click', toRight)
+
+
+body = document.getElementById('body')
+bodyWidth = body.offsetWidth
+
+console.log(bodyWidth)
+
+gallery = document.getElementById('gallery')
+
+const galleryNewWidth = bodyWidth * 0.50 
+
+gallery.style.width = galleryNewWidth + 'px'
