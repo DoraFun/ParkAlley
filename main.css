@@ -76,10 +76,10 @@ button {
 
 color: #FFFFFF;
 }
-bold-adress {
+.bold-adress {
   font-family: 'Roboto';
 font-style: normal;
-font-weight: 15000;
+font-weight: 500;
 font-size: 30px;
 line-height: 35px;
 
@@ -849,7 +849,7 @@ transparent;
 }
 
 .rectangle-23 {
-  background-color: var(--cararra);
+  background-color: #F9F9F9;
   border-radius: 3px;
   height: 90px;
   left: 852px;
@@ -974,7 +974,9 @@ color: #aeaeae;
 .span3 {
   margin-top: 35px;
   font-weight: 300;
+  font-size: 23px;
   font-style: normal;
+  width: 700px;
 }
 
 .span1 {
@@ -1127,7 +1129,7 @@ color: #aeaeae;
 }
 
 .rectangle-24 {
-  background-color: var(--cararra);
+  background-color:#F9F9F9;
   border-radius: 3px;
   height: 90px;
   left: 852px;
@@ -1415,7 +1417,7 @@ color: #AEAEAE;
   left: 200px;
   letter-spacing: 0.1em;
   position: absolute;
-  top: 87px;
+  top: 120px;
 }
 
 .text-38 {

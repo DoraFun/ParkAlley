@@ -80,7 +80,7 @@ rgba(255, 255, 255, 1);
   color: var(--white);
   font-family: var(--font-family-roboto);
   font-size: var(--font-size-l);
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
 }
 .poppins-semi-bold-mist-gray-364px {
@@ -149,7 +149,7 @@ rgba(255, 255, 255, 1);
   color: var(--white);
   font-family: var(--font-family-roboto);
   font-size: 29px;
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
 }
 .roboto-thin-black-19px {
@@ -169,7 +169,7 @@ rgba(255, 255, 255, 1);
 .roboto-light-white-30px-2 {
   font-family: var(--font-family-roboto);
   font-size: var(--font-size-xl);
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
 }
 .roboto-medium-white-30px {
@@ -190,7 +190,7 @@ rgba(255, 255, 255, 1);
   color: var(--white);
   font-family: var(--font-family-roboto);
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: 200;
   font-style: normal;
 }
 .montserrat-light-white-38px {
@@ -211,7 +211,7 @@ rgba(255, 255, 255, 1);
   color: var(--white);
   font-family: var(--font-family-roboto);
   font-size: var(--font-size-xl);
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
 }
 .roboto-light-fuscous-gray-23px {
