@@ -279,6 +279,7 @@ color: #FFFFFF;
   top: 388px;
   width: 405px;
   height: 58px;
+  line-height: 24px;
 }
 
 .rectangle-8 {
@@ -416,20 +417,23 @@ color: #FFFFFF;
 }
 
 .overlap-group5 {
+  box-sizing: border-box;
   align-items: flex-end;
-  background-image: url(img/Rectangle-4.svg);
+  background-color: #BDA788;
   background-size: 100% 100%;
   display: flex;
-  height: 69px;
+  min-height: 69px;
   justify-content: flex-end;
+  margin-left: 76px;
+  margin-top: 84px;
   min-width: 743px;
-  padding: 11px 85px;
+  padding: 11px 166px;
 }
 
 .text-6 {
   letter-spacing: 3.8px;
   min-height: 46px;
-  min-width: 176px;
+  width: 85px;
 }
 
 .overlap-group11 {
@@ -504,6 +508,12 @@ color: #FFFFFF;
 
 .span-1 {
   letter-spacing: 0.32px;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 35px;
+letter-spacing: 0.035em;
 }
 
 .number {
@@ -525,7 +535,7 @@ color: #FFFFFF;
   display: flex;
   flex-direction: column;
   margin-left: 56px;
-  min-height: 894px;
+  height: 916px;
   width: 641px;
 }
 
@@ -690,7 +700,7 @@ color: #FFFFFF;
     width: 100%;
     padding: 10px 0;
     position: absolute;
-    background: var(--rock-blue);
+    background: #667B8B;
     
     content: 'узнать подробнее';
     transform-origin: left bottom;
@@ -728,7 +738,7 @@ color: #FFFFFF;
     width: 100%;
     padding: 10px 0;
     position: absolute;
-    background: var(--rock-blue);
+    background: #667B8B;
     
     content: 'подобрать недвижимость';
     transform-origin: left bottom;
@@ -872,6 +882,14 @@ transparent;
 
 .span0 {
   color: var(--white);
+  font-family: 'MADE Evolve Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* or 122% */
+
+text-align: center;
 }
 
 .span1-2 {
@@ -917,6 +935,7 @@ transparent;
   letter-spacing: 0;
   position: absolute;
   top: 1830px;
+  font-weight: 300;
 }
 
 .group-5 {
@@ -1146,7 +1165,7 @@ color: #aeaeae;
   color: var(--white);
   font-family: var(--font-family-roboto);
   font-size: var(--font-size-xxxl);
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .text-15 {
@@ -1338,6 +1357,7 @@ color: #aeaeae;
   /* right: 48.6%; */
   margin: 0;
   justify-self: flex-end;
+  top: 3421px;
 }
 
 @media screen and (max-width: 1460px) {
@@ -1347,6 +1367,7 @@ color: #aeaeae;
     width: 743px;
     left: 0;
     margin: 0;
+    
   }
 }
 
@@ -1659,7 +1680,7 @@ color: #AEAEAE;
     color: #FFFFFF;
     padding: 10px 0;
     position: absolute;
-    background: var(--rock-blue);
+    background: #667B8B;
     content: 'ПОДОБРАТЬ НЕДВИЖИМОСТЬ';
     transform-origin: left bottom;
     transform: rotateX(90deg);
@@ -1938,7 +1959,7 @@ color: #AEAEAE;
   left: 0;
 }
 
-.goout-4 {
+ .goout-4 {
   position: absolute;
   margin: 0;
   top: 1421px; 
@@ -1946,7 +1967,20 @@ color: #AEAEAE;
   width: 62.9%;
   left: 37.1%;
   z-index: 1;
+  
 }
+
+/*@media screen and (max-width: 1420px) {
+  .goout-4 {
+    top: 1421px; 
+    box-sizing: border-box;
+    position: absolute;
+    width: 743px;
+    left: 0;
+    margin: 0;
+  }
+}
+*/
 
 .image22-1, .number-3, .text-9 {
   z-index: 2;
