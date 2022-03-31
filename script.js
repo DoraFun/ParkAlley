@@ -114,14 +114,16 @@ popup1.addEventListener('click', (e) => {
   }
 })
 
-
+const show = () => {
+  popup1.style.visibility = 'visible';
+  popup1Block.style.visibility = 'visible';
+  popup2Block.style.visibility = 'hidden';
+}
 
 window.addEventListener('scroll', e => {
   if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) 
   {
-    popup1.style.visibility = 'visible';
-    popup1Block.style.visibility = 'visible';
-    popup2Block.style.visibility = 'hidden';
+    setTimeout(show, 2000)
   }
 })
 
