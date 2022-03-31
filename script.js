@@ -82,7 +82,7 @@ gallery = document.getElementById('gallery')
 
 const galleryNewWidth = bodyWidth * 0.50 
 
-gallery.style.width = galleryNewWidth + 'px'
+//gallery.style.width = galleryNewWidth + 'px'
 
 popup1Block = document.getElementById('popup_1_block')
 popup2Block = document.getElementById('popup_2_block')
@@ -114,14 +114,16 @@ popup1.addEventListener('click', (e) => {
   }
 })
 
-
+const show = () => {
+  popup1.style.visibility = 'visible';
+  popup1Block.style.visibility = 'visible';
+  popup2Block.style.visibility = 'hidden';
+}
 
 window.addEventListener('scroll', e => {
   if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) 
   {
-    popup1.style.visibility = 'visible';
-    popup1Block.style.visibility = 'visible';
-    popup2Block.style.visibility = 'hidden';
+    setTimeout(show, 2000)
   }
 })
 
