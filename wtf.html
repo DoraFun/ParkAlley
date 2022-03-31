@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="main.css">
   <title>Document</title>
   <script defer src="./script.js"></script>
+  <script src="https://unpkg.com/imask"></script>
 </head>
 
 <body id="body">
@@ -31,7 +32,7 @@
         <div id="num1" class="phone-1"> <a class="phone-num" href="tel:+89009008070">8 900 900 80 -70</a> </div>
       </li>
     </nav>
-
+    
     <!-- основное тело сайта -->
     <section class="flex-col-1">
       <!-- блок 'куда стоит инвестировать' -->
@@ -44,9 +45,8 @@
             МЕСТО, <br />КУДА СТОИТ <br />ИНВЕСТИРОВАТЬ
           </h1>
 
-          <button id="btn_main" class="rectangle-5">
-            <p class="text-38 ">
-              ПОДОБРАТЬ НЕДВИЖИМОСТЬ</p>
+          <button id="btn_main" class="rectangle-5 text-38" >
+              ПОДОБРАТЬ НЕДВИЖИМОСТЬ
           </button>
 
           <div class="text-36">Эксклюзивное предложение от инвестора</div>
@@ -167,14 +167,13 @@
           <label class="text-22 roboto-light-white-30px">Ваш номер телефона</label>
 
           <input placeholder="Никита" class="rectangle-23"></input>
-          <input placeholder="+7 (988) 800 70-60" class="rectangle-24"></input>
+          <input data-mask="phone" placeholder="+7 (988) 800 70-60" class="rectangle-24"></input>
           
-          <button class="rectangle-27"></button>
+          <button class="rectangle-27 text-24 roboto-light-white-29px">Скачать каталог</button>
 
           <div class="rectangle-25"></div>
           <div class="rectangle-26"></div>
           
-          <div class="text-24 roboto-light-white-29px">Оставить заявку</div>
           <p class="text-25">
             <span class="span0">Нажимая на кнопку, вы принимаете<br />условия</span>
             <span class="span1-2">&nbsp;</span>
@@ -195,7 +194,7 @@
             <div class="text-2 roboto-light-white-30px-2">
               <span class="span-1 roboto-light-white-30px">Это эксклюзивное предложение от инвестора, цена ниже отдела
                 продаж </span>
-              <span class="span-1 roboto-light-rock-blue-30px">на 30 тыс. руб за 1 м<sup style="vertical-align: super; ">2</sup></span>
+              <span class="span-1 roboto-light-rock-blue-30px">на 30 тыс. руб за 1 м<sup style="vertical-align: super; font-size: 17px; ">2</sup></span>
             </div>
           </div>
           <div class="overlap-group11">
@@ -224,7 +223,7 @@
             <div class="flex-col-4">
               <div class="text-3 roboto-bold-white-23px">Отдел продаж</div>
               <div class="address montserrat-light-white-35px">305 000 руб.</div>
-              <div class="text-32 montserrat-light-white-35px">29,9 м2</div>
+              <div class="text-32 montserrat-light-white-35px">29,9 м<span style =" vertical-align: super; font-size: 20px";>2</span></div>
               <div class="overlap-group18">
                 <div class="phone montserrat-light-white-35px">9 120 000</div>
                 <img class="line-4" src="img\line-4@2x.svg" />
@@ -233,7 +232,7 @@
             <div class="flex-col-5">
               <div class="text-3 roboto-bold-white-23px">Наше предложение</div>
               <div class="address montserrat-light-white-35px">275 000 руб.</div>
-              <div class="text-33 montserrat-light-white-35px">29,9 м2</div>
+              <div class="text-33 montserrat-light-white-35px">29,9 м<span style =" vertical-align: super; font-size: 20px">2</span></div>
               <div class="overlap-group19">
                 <div class="phone montserrat-light-rock-blue-35px">8 220 000</div>
                 <img class="line-5" src="img\line-4@2x.svg" />
@@ -245,7 +244,7 @@
             <div class="text-2 roboto-light-white-30px-2">
               <span class="span-1 roboto-light-white-30px">На момент сдачи </span><span
                 class="span-1 roboto-light-rock-blue-30px">(3 квартал 2022 года)</span><span
-                class="span-1 roboto-light-white-30px"> Вы заработаете минимум 30% от вложенных Вами средств</span>
+                class="span-1 roboto-light-white-30px"> Вы заработаете минимум 30% <br> от вложенных Вами средств</span>
             </div>
           </div>
         </aside>
@@ -259,15 +258,13 @@
         <div class="text-41">Мы поможем подобрать Вам недвижимость или ответим на все вопросы</div>
         <!-- таблица с предложением м^2 -->
         <table class="rectangle-33"></table>
-        <div class="text-42 roboto-normal-white-35px">60,25 м2</div>
-        <div class="text-43 roboto-normal-white-35px">86,99 м2</div>
-        <div class="text-44 roboto-normal-white-35px">116,6 м2</div>
+        <div class="text-42 roboto-normal-white-35px">60,25 м<span style =" vertical-align: super; font-size: 20px">2</span></div>
+        <div class="text-43 roboto-normal-white-35px">86,99 м<span style =" vertical-align: super; font-size: 20px">2</span></div>
+        <div class="text-44 roboto-normal-white-35px">116,6 м<span style =" vertical-align: super; font-size: 20px">2</span></div>
 
-        <button class="rectangle-5-1"></button>
-        <button class="rectangle-34"></button>
-        
-        <div class="text-46 roboto-medium-white-23px">Узнать подробнее</div>
-        <div class="text-47 roboto-medium-white-23px">Подобрать недвижимость</div>
+        <button class="rectangle-5-1 text-46 roboto-medium-white-23px ">узнать подробнее</button>
+        <button class="rectangle-34 text-47 roboto-medium-white-23px">подобрать недвижимость</button>
+
       </section>
 
       <!-- заголовок галереи -->
@@ -301,7 +298,7 @@
             <img id="switch_img" src="./img/backview.png" class="rectangle-36"></img>
 
             <aside class="gallery_cont-aside">
-              <div id="switch_header" class="text-51 roboto-medium-hillary-27px">Вид справа</div>
+              <div id="switch_header" class="text-51 roboto-medium-hillary-27px">Вид сзади</div>
                
               <div id="switch_text" class="text-511">
                 Открывается вид 5 жилых домов, отдельное здание паркинга, бассейн, два теннисных корта и детские площадки.
@@ -316,10 +313,9 @@
             
             <label class="text-53 roboto-light-white-30px">Ваш номер телефона</label>
             <!-- ИСПРАВИТЬ СТИЛИ -->
-            <input placeholder="+7 (988) 800 70-60" class="rectangle-39"></input>
-            <button class="rectangle-40"></button>
+            <input data-mask="phone" placeholder="+7 (988) 800 70-60" class="rectangle-39"></input>
+            <button class="rectangle-40 text-54 roboto-light-white-29px">Записаться на просмотр</button>
 
-            <div class="text-54 roboto-light-white-29px">Записаться на просмотр</div>
             <div class="rectangle-41"></div>
             <div class="rectangle-43"></div>
           </form>
@@ -379,7 +375,7 @@
 
           <div class="popup_1-info-form-cont" style="margin-bottom: 22.26px;">
             <label class="popup_1-label" for="">Ваш номер телефона</label>
-            <input class="popup_1-input" placeholder="+7 (988) 800 70-60" type="text">
+            <input data-mask="phone" class="popup_1-input" placeholder="+7 (988) 800 70-60" type="text">
           </div>
 
           <button class="popup_1-btn">Оставить заявку</button>
@@ -399,7 +395,7 @@
         <div class="popup_2-text-3">Ваш номер телефона</div>
         <div class="popup_1-cond popup_2-text-4">Нажимая на кнопку, вы принимаете<br />условия <span style="color: #00a150;">передачи данных</span></div>
         <form class="popup_2-form">
-          <input class="popup_1-input" placeholder="+7 (988) 800 70-60" type="text">
+          <input data-mask="phone" class="popup_1-input" placeholder="+7 (988) 800 70-60" type="text">
 
           <button class="popup_1-btn">Оставить заявку</button>
         </form>
