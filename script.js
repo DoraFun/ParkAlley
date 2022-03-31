@@ -127,9 +127,30 @@ const toRight = () => {
   updateSwitchContainer(where)
 }
 
+const handlerTo = (fun, arrow) => {
+  fun()
+  arrow.removeEventListener('click', fun)
+  setTimeout(() => {
+    arrow.addEventListener('click', fun)
+  }, 500)
+}
 
-arrowLeft.addEventListener('click', toLeft)
-arrowRight.addEventListener('click', toRight)
+arrowLeft.addEventListener('click', () => {
+  if (arrowLeft.disable === true) return
+  toLeft()
+  arrowLeft.disable = true
+  setTimeout(() => {
+    arrowLeft.disable = false
+  }, 500)
+})
+arrowRight.addEventListener('click',() => {
+  if (arrowRight.disable === true) return
+  toRight()
+  arrowRight.disable = true
+  setTimeout(() => {
+    arrowRight.disable = false
+  }, 500)
+})
 
 
 body = document.getElementById('body')
