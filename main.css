@@ -2195,3 +2195,87 @@ color: #AEAEAE;
   -o-animation: fadeout 1s;
   animation: fadeout 1s;
 }
+
+
+@keyframes goinright {
+  from { 
+    opacity: 1;
+    transform: translateX(150%);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0);
+  }
+}
+
+@keyframes gooutright {
+  from { 
+    transform: translateX(0);
+  }
+  to { 
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+}
+
+.clsGoInRight {
+  -webkit-animation: goinright 0.5s; 
+  -moz-animation: goinright 0.5s;
+  -ms-animation: goinright 0.5s;
+  -o-animation: goinright 0.5s;
+  animation: goinright 0.5s;
+}
+
+.clsGoOutRight {
+  -webkit-animation: gooutright 0.5s; 
+  -moz-animation: gooutright 0.5s;
+  -ms-animation: gooutright 0.5s;
+  -o-animation: gooutright 0.5s;
+  animation: gooutright 0.5s;
+}
+
+
+@keyframes goinleft {
+  from { 
+    opacity: 1;
+    transform: translateX(-150%);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gooutleft {
+  from { 
+    transform: translateX(0);
+  }
+  to { 
+    opacity: 0;
+    transform: translateX(150%);
+  }
+}
+
+.clsGoInLeft {
+  -webkit-animation: goinleft 0.5s; 
+  -moz-animation: goinleft 0.5s;
+  -ms-animation: goinleft 0.5s;
+  -o-animation: goinleft 0.5s;
+  animation: goinleft 0.5s;
+}
+
+.clsGoOutLeft {
+  -webkit-animation: gooutleft 0.5s; 
+  -moz-animation: gooutleft 0.5s;
+  -ms-animation: gooutleft 0.5s;
+  -o-animation: gooutleft 0.5s;
+  animation: gooutleft 0.5s;
+}
+
+.imgFrame {
+  position: absolute;
+  height: 450px;
+  width: 1400px;
+  left: calc(50% - 700);
+  overflow: hidden;
+}

@@ -1,7 +1,6 @@
 arrowLeft = document.getElementById('arrow_left')
 arrowRight = document.getElementById('arrow_right')
 
-switchImg = document.getElementById('switch_img')
 switchHeader = document.getElementById('switch_header')
 switchText = document.getElementById('switch_text')
 switchNumber = document.getElementById('switch_number')
@@ -41,33 +40,117 @@ airview = {
   4 лифта, преддомовая парковка. `
 }
 
+switchImg1 = document.getElementById('switch_img1')
+switchImg2 = document.getElementById('switch_img2')
+switchImg3 = document.getElementById('switch_img3')
+switchImg4 = document.getElementById('switch_img4')
+switchImg5 = document.getElementById('switch_img5')
+
+switchImg = [switchImg1, switchImg2, switchImg3, switchImg4, switchImg5]
+console.log(switchImg)
 switchArr = [backview, pull, alley, mall, airview]
 current = 0
 
-const updateSwitchContainer = () => {
-  switchImg.src = switchArr[current].img
+const removeImgAnim = (node, cls) => {
+  node.classList.remove(cls)
+}
+
+for (i = 0; i < switchImg.length; i++) {
+  switchImg[i].style.zIndex = 2
+}
+
+for (i = 1; i < switchImg.length; i++) {
+  switchImg[i].style.visibility = 'hidden'
+  switchImg[i].style.zIndex = 1
+}
+
+const updateSwitchContainer = (where) => {
   switchHeader.innerHTML = switchArr[current].header
   switchText.innerHTML = switchArr[current].text
   switchNumber.innerHTML = `0${current + 1}`
+
+  currentLast = current - where
+  if (currentLast === -1) currentLast = 4
+  if (current === 4 && currentLast === 5) currentLast = 0
+
+  last = switchImg[currentLast]
+  next = switchImg[current]
+
+  last.style.zIndex = 1
+  next.style.zIndex = 2
+
+  if (where === 1) {
+    last.classList.add('clsGoOutRight')
+    setTimeout(() => {
+      removeImgAnim(last, 'clsGoOutRight')
+      last.style.visibility = 'hidden'
+    }, 500)
+  
+  
+    next.classList.add('clsGoInRight')
+    next.style.visibility = 'visible'
+    setTimeout(() =>{
+      removeImgAnim(next, 'clsGoInRight')
+    }, 500)
+  }
+
+  if (where === -1) {
+    last.classList.add('clsGoOutLeft')
+    setTimeout(() => {
+      removeImgAnim(last, 'clsGoOutLeft')
+      last.style.visibility = 'hidden'
+    }, 500)
+  
+  
+    next.classList.add('clsGoInLeft')
+    next.style.visibility = 'visible'
+    setTimeout(() =>{
+      removeImgAnim(next, 'clsGoInLeft')
+    }, 500)
+  }
+  
 }
 
 const toLeft = () => {
+  where = -1
   if (current === 0) current = switchArr.length - 1
   else current -= 1
   
-  updateSwitchContainer()
+  updateSwitchContainer(where)
 }
 
 const toRight = () => {
+  where = 1
   if (current === 4) current = 0
   else current += 1
 
-  updateSwitchContainer()
+  updateSwitchContainer(where)
 }
 
+const handlerTo = (fun, arrow) => {
+  fun()
+  arrow.removeEventListener('click', fun)
+  setTimeout(() => {
+    arrow.addEventListener('click', fun)
+  }, 500)
+}
 
-arrowLeft.addEventListener('click', toLeft)
-arrowRight.addEventListener('click', toRight)
+arrowLeft.addEventListener('click', () => {
+  if (arrowLeft.disable === true) return
+  toLeft()
+  arrowLeft.disable = true
+  setTimeout(() => {
+    arrowLeft.disable = false
+  }, 500)
+})
+arrowRight.addEventListener('click',() => {
+  if (arrowRight.disable === true) return
+  toRight()
+  arrowRight.disable = true
+  setTimeout(() => {
+    arrowRight.disable = false
+  }, 500)
+})
 
 
 body = document.getElementById('body')
