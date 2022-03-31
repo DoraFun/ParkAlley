@@ -193,8 +193,10 @@ document.addEventListener('keydown', e => {
 })
 
 btnMain = document.getElementById('btn_main')
+btnNew1 = document.getElementById('btn_new_1')
+btnNew2 = document.getElementById('btn_new_2')
 
-btnMain.addEventListener('click', () => {
+const handleMainBtnClick = () => {
   popup1.style.visibility = 'visible';
   popup1Block.style.visibility = 'visible';
   popup2Block.style.visibility = 'hidden';
@@ -202,7 +204,11 @@ btnMain.addEventListener('click', () => {
   popup1.classList.remove('clsFadeIn');
   popup1.classList.add('clsFadeIn');
   removeAnime();
-})
+}
+
+
+btnMain.addEventListener('click', handleMainBtnClick)
+btnNew2.addEventListener('click', handleMainBtnClick)
 
 
 function childOf(c,p){while((c=c.parentNode)&&c!==p);return !!c}
@@ -250,7 +256,7 @@ window.addEventListener('scroll', handleScroll)
 num1 = document.getElementById('num1')
 num2 = document.getElementById('num2')
 
-num1.addEventListener('click', e => {
+const handleNumClick = () => {
   popup1.style.visibility = 'visible';
   popup1Block.style.visibility = 'hidden';
   popup2Block.style.visibility = 'visible';
@@ -258,17 +264,11 @@ num1.addEventListener('click', e => {
   popup1.classList.remove('clsFadeIn');
   popup1.classList.add('clsFadeIn');
   removeAnime();
-})
+}
 
-num2.addEventListener('click', e => {
-  popup1.style.visibility = 'visible';
-  popup1Block.style.visibility = 'hidden';
-  popup2Block.style.visibility = 'visible';
-
-  popup1.classList.remove('clsFadeIn');
-  popup1.classList.add('clsFadeIn');
-  removeAnime();
-})
+num1.addEventListener('click', handleNumClick)
+num2.addEventListener('click', handleNumClick)
+btnNew1.addEventListener('click', handleNumClick)
 
 //маска телефона
 document.addEventListener('DOMContentLoaded', () => {
