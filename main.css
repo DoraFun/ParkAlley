@@ -18,6 +18,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline;
   
+  scroll-behavior: smooth;
 }
 
 button {
@@ -98,15 +99,36 @@ color: #FFFFFF;
 
 .phone-num {
   text-decoration: none;
-  border-bottom: 1px solid #9EB4C5;
+  /* border-bottom: 1px solid #9EB4C5; */
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: lighter;
   font-size: 19px;
   line-height: 23px;
   color: #FFFFFF;
-  
+
+  position: relative;
+  z-index: 1;
 }
+
+.phone-num::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color:#9EB4C5;
+  z-index: -1;
+
+  transition: height ease-in-out 0.3s;
+}
+
+.phone-num:hover.phone-num::after {
+  height: 11px;
+}
+
 .adress {
   position: absolute;
   margin-left: 25px;
@@ -2145,9 +2167,9 @@ color: #AEAEAE;
 .goout-10 {
   box-sizing: border-box;
   position: absolute;
-  top: 5973px;
+  top: 5983px;
   margin: 0;
-  height: 370px;
+  height: 360px;
   right: 0;
   left: auto;
   /* width: 45.5%; */
@@ -2281,4 +2303,33 @@ color: #AEAEAE;
   width: 1400px;
   left: calc(50% - 700);
   overflow: hidden;
+}
+
+.text-fz {
+  position: absolute;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 39px;
+  letter-spacing: 1px;
+
+
+  color: white;
+
+  top: -50px;
+  left: 295px;
+  min-width: 300px;
+  z-index: 3;
+
+  white-space: nowrap;
+}
+
+.cont-fz {
+  position: relative;
+}
+
+.text-fz span {
+  font-weight: 500;
 }
