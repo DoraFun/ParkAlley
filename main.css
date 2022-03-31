@@ -2177,7 +2177,7 @@ color: #AEAEAE;
 }
 
 
-@keyframes goin {
+@keyframes goinright {
   from { 
     opacity: 1;
     transform: translateX(150%);
@@ -2188,31 +2188,68 @@ color: #AEAEAE;
   }
 }
 
-@keyframes goout {
+@keyframes gooutright {
   from { 
-    opacity: 1;
     transform: translateX(0);
   }
   to { 
-    opacity: 1;
+    opacity: 0;
     transform: translateX(-150%);
   }
 }
 
-.clsGoIn {
-  -webkit-animation: goin 0.5s; 
-  -moz-animation: goin 0.5s;
-  -ms-animation: goin 0.5s;
-  -o-animation: goin 0.5s;
-  animation: goin 0.5s;
+.clsGoInRight {
+  -webkit-animation: goinright 0.5s; 
+  -moz-animation: goinright 0.5s;
+  -ms-animation: goinright 0.5s;
+  -o-animation: goinright 0.5s;
+  animation: goinright 0.5s;
 }
 
-.clsGoOut {
-  -webkit-animation: goout 0.5s; 
-  -moz-animation: goout 0.5s;
-  -ms-animation: goout 0.5s;
-  -o-animation: goout 0.5s;
-  animation: goout 0.5s;
+.clsGoOutRight {
+  -webkit-animation: gooutright 0.5s; 
+  -moz-animation: gooutright 0.5s;
+  -ms-animation: gooutright 0.5s;
+  -o-animation: gooutright 0.5s;
+  animation: gooutright 0.5s;
+}
+
+
+@keyframes goinleft {
+  from { 
+    opacity: 1;
+    transform: translateX(-150%);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gooutleft {
+  from { 
+    transform: translateX(0);
+  }
+  to { 
+    opacity: 0;
+    transform: translateX(150%);
+  }
+}
+
+.clsGoInLeft {
+  -webkit-animation: goinleft 0.5s; 
+  -moz-animation: goinleft 0.5s;
+  -ms-animation: goinleft 0.5s;
+  -o-animation: goinleft 0.5s;
+  animation: goinleft 0.5s;
+}
+
+.clsGoOutLeft {
+  -webkit-animation: gooutleft 0.5s; 
+  -moz-animation: gooutleft 0.5s;
+  -ms-animation: gooutleft 0.5s;
+  -o-animation: gooutleft 0.5s;
+  animation: gooutleft 0.5s;
 }
 
 .imgFrame {

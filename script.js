@@ -55,8 +55,13 @@ const removeImgAnim = (node, cls) => {
   node.classList.remove(cls)
 }
 
+for (i = 0; i < switchImg.length; i++) {
+  switchImg[i].style.zIndex = 2
+}
+
 for (i = 1; i < switchImg.length; i++) {
   switchImg[i].style.visibility = 'hidden'
+  switchImg[i].style.zIndex = 1
 }
 
 const updateSwitchContainer = (where) => {
@@ -66,23 +71,44 @@ const updateSwitchContainer = (where) => {
 
   currentLast = current - where
   if (currentLast === -1) currentLast = 4
-  if (current === 4 && currentLast === 1) currentLast = 0
+  if (current === 4 && currentLast === 5) currentLast = 0
 
   last = switchImg[currentLast]
   next = switchImg[current]
 
-  last.classList.add('clsGoOut')
-  setTimeout(() => {
-    removeImgAnim(last, 'clsGoOut')
-    last.style.visibility = 'hidden'
-  }, 500)
+  last.style.zIndex = 1
+  next.style.zIndex = 2
 
+  if (where === 1) {
+    last.classList.add('clsGoOutRight')
+    setTimeout(() => {
+      removeImgAnim(last, 'clsGoOutRight')
+      last.style.visibility = 'hidden'
+    }, 500)
+  
+  
+    next.classList.add('clsGoInRight')
+    next.style.visibility = 'visible'
+    setTimeout(() =>{
+      removeImgAnim(next, 'clsGoInRight')
+    }, 500)
+  }
 
-  next.classList.add('clsGoIn')
-  next.style.visibility = 'visible'
-  setTimeout(() =>{
-    removeImgAnim(next, 'clsGoIn')
-  }, 500)
+  if (where === -1) {
+    last.classList.add('clsGoOutLeft')
+    setTimeout(() => {
+      removeImgAnim(last, 'clsGoOutLeft')
+      last.style.visibility = 'hidden'
+    }, 500)
+  
+  
+    next.classList.add('clsGoInLeft')
+    next.style.visibility = 'visible'
+    setTimeout(() =>{
+      removeImgAnim(next, 'clsGoInLeft')
+    }, 500)
+  }
+  
 }
 
 const toLeft = () => {
