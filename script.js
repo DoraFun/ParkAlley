@@ -5,6 +5,8 @@ switchHeader = document.getElementById('switch_header')
 switchText = document.getElementById('switch_text')
 switchNumber = document.getElementById('switch_number')
 
+phoneBtn1 = document.getElementById('phone_btn1')
+phoneBtn2 = document.getElementById('phone_btn2')
 
 backview = {
   img: './img/backview.png',
@@ -180,6 +182,13 @@ document.addEventListener('keydown', e => {
     popup1.style.visibility = 'hidden';
     popup1Block.style.visibility = 'hidden';
     popup2Block.style.visibility = 'hidden';
+
+    phoneBtn1.classList.remove('popup_1-btn')
+    phoneBtn2.classList.remove('popup_1-btn')
+    setTimeout(() => {
+      phoneBtn1.classList.add('popup_1-btn')
+      phoneBtn2.classList.add('popup_1-btn')
+    }, 300)
   }
 })
 
@@ -203,6 +212,13 @@ popup1.addEventListener('click', (e) => {
     popup1.style.visibility = 'hidden';
     popup1Block.style.visibility = 'hidden';
     popup2Block.style.visibility = 'hidden';
+
+    phoneBtn1.classList.remove('popup_1-btn')
+    phoneBtn2.classList.remove('popup_1-btn')
+    setTimeout(() => {
+      phoneBtn1.classList.add('popup_1-btn')
+      phoneBtn2.classList.add('popup_1-btn')
+    }, 300)
   }
 })
 
@@ -267,3 +283,5 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 })
+
+

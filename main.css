@@ -2279,3 +2279,32 @@ color: #AEAEAE;
   left: calc(50% - 700);
   overflow: hidden;
 }
+
+.text-fz {
+  position: absolute;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 39px;
+  letter-spacing: 1px;
+
+
+  color: white;
+
+  top: -50px;
+  left: 295px;
+  min-width: 300px;
+  z-index: 3;
+
+  white-space: nowrap;
+}
+
+.cont-fz {
+  position: relative;
+}
+
+.text-fz span {
+  font-weight: 500;
+}
