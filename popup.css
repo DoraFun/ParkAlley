@@ -61,7 +61,14 @@
   color: white;
 
   margin-bottom: 9.54px;
+  transition: all 400ms ease;
 } 
+
+.popup_1-btn:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
 .aside-2 {
   padding-left: 16px;
@@ -77,6 +84,7 @@
   font-size: 34px;
   line-height: 41px;
   letter-spacing: 0.02em;
+  color: #565656;
 
   margin-bottom: 21px;
 }
@@ -101,16 +109,18 @@
   font-weight: 300;
   font-size: 19.0776px;
   line-height: 22px;
+  color: #565656;
 }
 
 .popup_1-input {
+  outline: none;
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 19.0776px;
   line-height: 22px;
 
-  color: #AEAEAE;
+  background-color: #F9F9F9;
 
   display: block;
 
@@ -118,6 +128,15 @@
   height: 58px;
 
   margin-top: 5.34px;
+}
+
+.popup_1-input:focus {
+  
+  outline: 0.7px solid #7796AF;
+}
+
+.popup_1-input::placeholder {
+  padding-left: 5.72px;
 }
 
 .popup_1-cond {  
@@ -148,6 +167,7 @@
 .aside-1 {
   position: relative;
   overflow: hidden;
+  right: 1px;
 }
 
 .aside-1 img {
