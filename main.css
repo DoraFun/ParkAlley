@@ -437,14 +437,16 @@ color: #FFFFFF;
 }
 
 .overlap-group11 {
+  position: absolute;
+  top: 4074px;
   align-items: flex-end;
   align-self: flex-start;
   background-color: var(--boulder);
   display: flex;
   flex-direction: column;
-  margin-top: 177px;
+
   min-height: 203px;
-  padding: 68px 26px;
+  /*padding: 68px 26px;*/
   width: 641px;
 }
 
@@ -453,6 +455,8 @@ color: #FFFFFF;
   display: flex;
   height: 43px;
   min-width: 458px;
+  
+  padding: 68px 26px;
 }
 
 .phone-5 {
@@ -484,8 +488,8 @@ color: #FFFFFF;
   font-size: var(--font-size-xs);
   font-weight: 300;
   letter-spacing: 0;
-  margin-left: 159px;
-  margin-top: 4px;
+  margin-left: 115px;
+ /* margin-top: 4px; */
   min-height: 20px;
   min-width: 78px;
 }
@@ -493,9 +497,10 @@ color: #FFFFFF;
 .overlap-group13 {
   height: 293px;
   margin-right: 13px;
-  margin-top: 103px;
+ /* margin-top: 103px; */
   position: relative;
   width: 552px;
+  bottom: 8px;
 }
 
 .text-2 {
@@ -528,6 +533,7 @@ letter-spacing: 0.035em;
   margin-right: 103px;
   min-height: 35px;
   min-width: 268px;
+  padding-top: 398px;
 }
 
 .flex-col-3 {
@@ -561,17 +567,16 @@ letter-spacing: 0.035em;
 }
 
 .flex-row-4 {
-  align-items: flex-start;
-  background-color: var(--boulder);
-  display: flex;
-  height: 369px;
-  margin-top: 77px;
-  min-width: 641px;
-  padding: 87px 39px;
+  align-items: center;
+    background-color: var(--boulder);
+    display: flex;
+    height: 369px;
+    margin-top: 77px;
+    min-width: 641px;
 }
 
 .flex-col-4 {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-direction: column;
   min-height: 180px;
@@ -655,7 +660,7 @@ letter-spacing: 0.035em;
 
 .overlap-group10 {
   height: 293px;
-  margin-top: 77px;
+  margin-top: 90px;
   position: relative;
   width: 552px;
 }
@@ -848,7 +853,7 @@ letter-spacing: 0.035em;
   letter-spacing: 1.16px;
   position: absolute;
   top: 94px;
-  width: 614px;
+  width: 615px;
 }
 
 .overlap-group7 {
@@ -1390,6 +1395,14 @@ color: #aeaeae;
   position: absolute;
   top: 406px;
   width: 44px;
+  transition: all 400ms ease;
+}
+
+
+.arrow-circle-right:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .overlap-group6 {
@@ -1555,6 +1568,13 @@ color: #AEAEAE;
   position: absolute;
   top: 406px;
   width: 44px;
+  transition: all 400ms ease;
+}
+
+.arrow-circle-left:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .gallery_cont-aside {
@@ -1625,6 +1645,7 @@ color: #AEAEAE;
   color: var(--white);
   font-family: var(--font-family-montserrat);
   font-size: 51px;
+  line-height: 62px;
   font-weight: 300;
   left: 200px;
   letter-spacing: 0.1em;
@@ -1735,6 +1756,13 @@ color: #AEAEAE;
   position: absolute;
   top: 10px;
   width: 556px;
+  transition: all 400ms ease;
+}
+
+.image2-1:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.06);
 }
 
 .rectangle-7 {
