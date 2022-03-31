@@ -664,8 +664,15 @@ letter-spacing: 0.035em;
   width: 138px;
 }
 
-.phone {
-  left: 0;
+.phone1 {
+  left: -32px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 1px;
+}
+
+.phone2 {
+  left: -8px;
   letter-spacing: 0;
   position: absolute;
   top: 1px;
