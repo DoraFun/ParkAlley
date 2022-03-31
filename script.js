@@ -87,6 +87,11 @@ const galleryNewWidth = bodyWidth * 0.50
 popup1Block = document.getElementById('popup_1_block')
 popup2Block = document.getElementById('popup_2_block')
 
+
+const removeAnime = () => {
+  setTimeout(() => popup1.classList.remove('clsFadeIn'), 1001)
+}
+
 document.addEventListener('keydown', e => {
   if (e.code === 'Escape') {
     popup1.style.visibility = 'hidden';
@@ -101,6 +106,10 @@ btnMain.addEventListener('click', () => {
   popup1.style.visibility = 'visible';
   popup1Block.style.visibility = 'visible';
   popup2Block.style.visibility = 'hidden';
+
+  popup1.classList.remove('clsFadeIn');
+  popup1.classList.add('clsFadeIn');
+  removeAnime();
 })
 
 
@@ -118,14 +127,26 @@ const show = () => {
   popup1.style.visibility = 'visible';
   popup1Block.style.visibility = 'visible';
   popup2Block.style.visibility = 'hidden';
+
+  popup1.classList.remove('clsFadeIn');
+  popup1.classList.add('clsFadeIn');
+  removeAnime();
 }
 
-window.addEventListener('scroll', e => {
-  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) 
-  {
+
+
+
+let checked = false
+
+const handleScroll = () => {
+  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
     setTimeout(show, 2000)
+    checked = true
+    window.removeEventListener('scroll', handleScroll)
   }
-})
+}
+
+window.addEventListener('scroll', handleScroll)
 
 num1 = document.getElementById('num1')
 num2 = document.getElementById('num2')
@@ -134,12 +155,20 @@ num1.addEventListener('click', e => {
   popup1.style.visibility = 'visible';
   popup1Block.style.visibility = 'hidden';
   popup2Block.style.visibility = 'visible';
+
+  popup1.classList.remove('clsFadeIn');
+  popup1.classList.add('clsFadeIn');
+  removeAnime();
 })
 
 num2.addEventListener('click', e => {
   popup1.style.visibility = 'visible';
   popup1Block.style.visibility = 'hidden';
   popup2Block.style.visibility = 'visible';
+
+  popup1.classList.remove('clsFadeIn');
+  popup1.classList.add('clsFadeIn');
+  removeAnime();
 })
 
 //маска телефона
