@@ -27,6 +27,26 @@ button {
   cursor: pointer;
 }
 
+/*.fz { 
+
+ position: static;
+width: 263px;
+height: 39px;
+left: 496px;
+top: 642px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 26px;
+line-height: 39px;
+ or 39px 
+
+
+color: #FFFFFF;
+
+} */
+
 .osnova {
 
   align-items: flex-end;
