@@ -2175,3 +2175,50 @@ color: #AEAEAE;
   -o-animation: fadeout 1s;
   animation: fadeout 1s;
 }
+
+
+@keyframes goin {
+  from { 
+    opacity: 1;
+    transform: translateX(150%);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0);
+  }
+}
+
+@keyframes goout {
+  from { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(-150%);
+  }
+}
+
+.clsGoIn {
+  -webkit-animation: goin 0.5s; 
+  -moz-animation: goin 0.5s;
+  -ms-animation: goin 0.5s;
+  -o-animation: goin 0.5s;
+  animation: goin 0.5s;
+}
+
+.clsGoOut {
+  -webkit-animation: goout 0.5s; 
+  -moz-animation: goout 0.5s;
+  -ms-animation: goout 0.5s;
+  -o-animation: goout 0.5s;
+  animation: goout 0.5s;
+}
+
+.imgFrame {
+  position: absolute;
+  height: 450px;
+  width: 1400px;
+  left: calc(50% - 700);
+  overflow: hidden;
+}
