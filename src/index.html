@@ -7,8 +7,8 @@
   <meta name=viewport content="width=device-width, initial-scale=1.0">
   <link rel=stylesheet href=main.css>
   <title>Document</title>
-  <script defer src=./script.js></script>
-  <script src=https://unpkg.com/imask></script>
+  <script defer src='index.js'></script>
+  <script defer src=https://unpkg.com/imask></script>
 </head>
 
 <body id=body>
@@ -131,17 +131,22 @@
         <div class=overlap-group1>
           <img src="img\iPhone 13.png" alt>
         </div>
-        <form>
+
+        <form id="tg_form1">
           <div class=rectangle-22></div>
           <div class="text-20 roboto-medium-white-38px">
             <span class=roboto-medium-white-38px>Узнать подробнее?<br></span>
             <span class=span1-1> Заполните форму и<br> специалист свяжется с<br> вами в течение 15 минут</span>
           </div>
+
           <label class="text-21 roboto-light-white-30px">Ваше имя</label>
           <label class="text-22 roboto-light-white-30px">Ваш номер телефона</label>
-          <input placeholder=Никита class=rectangle-23></input>
-          <input data-mask=phone placeholder="+7 (988) 800 70-60" class=rectangle-24></input>
-          <button class="rectangle-27 text-24 roboto-light-white-29px">Узнать подробнее</button>
+
+          <input id="tg_name1" type="text" placeholder=Никита class=rectangle-23></input>
+          <input id="tg_phone1" type="tel" data-mask=phone placeholder="+7 (988) 800 70-60" class=rectangle-24></input>
+
+          <button style="z-index: 3;" id="tg_btn1" type="submit" class="rectangle-27 text-24 roboto-light-white-29px">Узнать подробнее</button>
+          
           <div class=rectangle-25></div>
           <div class=rectangle-26></div>
           <p class=text-25>
@@ -149,6 +154,7 @@
             <a class=span2>передачи данных</a>
           </p>
         </form>
+
       </section>
       <section class=flex-row-1>
         <aside class=flex-col-2>
@@ -313,14 +319,14 @@
       <aside class=aside-2>
         <div class=popup_1_text-1>Готовы<br />инвестировать?</div>
         <div class=popup_1_text-2>Оставьте заявку и мы свяжемся<br />с Вами в течении 10 минут</div>
-        <form class=popup_1-form action>
+        <form id="tg_form2" class=popup_1-form action>
           <div class=popup_1-info-form-cont style=margin-bottom:17.17px>
             <label class=popup_1-label for>Ваше имя</label>
-            <input class=popup_1-input placeholder=Никита type=text>
+            <input id="tg_name2" class=popup_1-input placeholder=Никита type=text>
           </div>
           <div class=popup_1-info-form-cont style=margin-bottom:22.26px>
             <label class=popup_1-label for>Ваш номер телефона</label>
-            <input data-mask=phone class=popup_1-input placeholder="+7 (988) 800 70-60" type=text>
+            <input id="tg_phone2" data-mask=phone class=popup_1-input placeholder="+7 (988) 800 70-60" type=text>
           </div>
           <button id=phone_btn1 class=popup_1-btn>Оставить заявку</button>
           <div class=popup_1-cond>Нажимая на кнопку, вы принимаете<br />условия <span style=color:#00a150>передачи
@@ -337,8 +343,8 @@
         <div class=popup_2-text-3>Ваш номер телефона</div>
         <div class="popup_1-cond popup_2-text-4">Нажимая на кнопку, вы принимаете<br />условия <span
             style=color:#00a150>передачи данных</span></div>
-        <form class=popup_2-form>
-          <input data-mask=phone class=popup_1-input placeholder="+7 (988) 800 70-60" type=text>
+        <form id="tg_form3" class=popup_2-form>
+          <input id="tg_phone3" data-mask=phone class=popup_1-input placeholder="+7 (988) 800 70-60" type=text>
           <button id=phone_btn2 class=popup_1-btn>Оставить заявку</button>
         </form>
       </aside>

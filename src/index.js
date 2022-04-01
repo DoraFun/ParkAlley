@@ -1,3 +1,5 @@
+
+
 arrowLeft = document.getElementById('arrow_left')
 arrowRight = document.getElementById('arrow_right')
 
@@ -49,7 +51,6 @@ switchImg4 = document.getElementById('switch_img4')
 switchImg5 = document.getElementById('switch_img5')
 
 switchImg = [switchImg1, switchImg2, switchImg3, switchImg4, switchImg5]
-console.log(switchImg)
 switchArr = [backview, pull, alley, mall, airview]
 current = 0
 
@@ -279,7 +280,163 @@ document.addEventListener('DOMContentLoaded', () => {
   elements.forEach(el => { // для каждого найденного поля с атрибутом [data-mask="phone"]
     IMask(el, phoneOptions) // инициализируем плагин с установленными выше параметрами
   })
+})
+
+tgForm1 = document.getElementById('tg_form1')
+tgName1 = document.getElementById('tg_name1')
+tgPhone1 = document.getElementById('tg_phone1')
+tgBtn1 = document.getElementById('tg_btn1')
+
+tgForm2 = document.getElementById('tg_form2')
+tgName2 = document.getElementById('tg_name2')
+tgPhone2 = document.getElementById('tg_phone2')
+tgBtn2 = document.getElementById('phone_btn1')
+
+tgForm3 = document.getElementById('tg_form3')
+tgPhone3 = document.getElementById('tg_phone3')
+tgBtn3 = document.getElementById('phone_btn2')
+
+
+tgForm1.addEventListener('submit', async (e) => {
+  e.preventDefault()
+  
+  nameVal = tgName1.value
+  phoneVal = tgPhone1.value
+
+  if (tgBtn1.disable === true) return
+  tgBtn1.disable = true
+
+  if (phoneVal.length !== 16) {
+    tgBtn1.classList.add('errorBtnAnim')
+
+    setTimeout(() => {
+      tgBtn1.classList.remove('errorBtnAnim')
+      tgBtn1.disable = false
+    }, 500)
+
+    return
+  }
+
+  token = '5115966698:AAExozsusCsk6k5ZKXkVSJYx6FAkjLsCMxU'
+  chatId = '1716833128'
+  
+  data = {
+    name: nameVal,
+    phone: phoneVal
+  }
+
+  text = `Новая заявка%0AИмя: ${nameVal}%0AНомер: ${phoneVal}`
+  
+  url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`
+
+  const res = await fetch(url, {
+    method: 'POST',
+  })
+
+  console.log(res)
+  
+
+  tgBtn1.classList.add('successBtnAnim')
+
+  setTimeout(() => {
+    tgBtn1.classList.remove('successBtnAnim')
+    tgBtn1.disable = false
+  }, 800)
 
 })
 
+tgForm2.addEventListener('submit', async (e) => {
+  e.preventDefault()
+  
+  nameVal = tgName2.value
+  phoneVal = tgPhone2.value
 
+  if (tgBtn2.disable === true) return
+  tgBtn2.disable = true
+
+  if (phoneVal.length !== 16) {
+    tgBtn2.classList.add('errorBtnAnim')
+
+    setTimeout(() => {
+      tgBtn2.classList.remove('errorBtnAnim')
+      tgBtn2.disable = false
+    }, 500)
+
+    return
+  }
+
+  token = '5115966698:AAExozsusCsk6k5ZKXkVSJYx6FAkjLsCMxU'
+  chatId = '1716833128'
+  
+  data = {
+    name: nameVal,
+    phone: phoneVal
+  }
+
+  text = `Новая заявка%0AИмя: ${nameVal}%0AНомер: ${phoneVal}`
+  
+  url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`
+
+  const res = await fetch(url, {
+    method: 'POST',
+  })
+
+  console.log(res)
+  
+
+  tgBtn2.classList.add('successBtnAnim')
+
+  setTimeout(() => {
+    tgBtn2.classList.remove('successBtnAnim')
+    tgBtn2.disable = false
+  }, 800)
+
+})
+
+tgForm3.addEventListener('submit', async (e) => {
+  e.preventDefault()
+  
+  nameVal = 'Нет имени'
+  phoneVal = tgPhone3.value
+
+  if (tgBtn3.disable === true) return
+  tgBtn3.disable = true
+
+  if (phoneVal.length !== 16) {
+    tgBtn3.classList.add('errorBtnAnim')
+
+    setTimeout(() => {
+      tgBtn3.classList.remove('errorBtnAnim')
+      tgBtn3.disable = false
+    }, 500)
+
+    return
+  }
+
+  token = '5115966698:AAExozsusCsk6k5ZKXkVSJYx6FAkjLsCMxU'
+  chatId = '1716833128'
+  
+  data = {
+    name: nameVal,
+    phone: phoneVal
+  }
+
+  text = `Новая заявка%0AИмя: ${nameVal}%0AНомер: ${phoneVal}`
+  
+  url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`
+
+  const res = await fetch(url, {
+    method: 'POST',
+  })
+
+  console.log(res)
+  
+
+  tgBtn3.classList.add('successBtnAnim')
+
+  setTimeout(() => {
+    tgBtn3.classList.remove('successBtnAnim')
+    tgBtn3.disable = false
+  }, 800)
+
+})

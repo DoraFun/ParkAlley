@@ -2360,3 +2360,63 @@ color: #AEAEAE;
 .text-fz span {
   font-weight: 500;
 }
+
+@keyframes errorAnim {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-5%);
+  }
+
+  40% {
+    transform: translateX(5%);
+    background-color: #616161;
+  }
+
+  60% {
+    transform: translateX(-5%);
+    transform: scale(1);
+  }
+
+  80% {
+    transform: translateX(5%);
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: scale(1.1);
+  }
+}
+
+.errorBtnAnim {
+  -webkit-animation: errorAnim ease-in-out 0.5s; 
+  -moz-animation: errorAnim ease-in-out 0.5s;
+  -ms-animation: errorAnim ease-in-out 0.5s;
+  -o-animation: errorAnim ease-in-out 0.5s;
+  animation: errorAnim ease-in-out 0.5s;
+}
+
+@keyframes successAnim {
+  0% {
+    background-color: var(--shadow-blue);
+  }
+
+  50% {
+    background-color:#009f50;
+  }
+
+  100% {
+    background-color: var(--shadow-blue);
+  }
+}
+
+.successBtnAnim {
+  -webkit-animation: successAnim 0.8s; 
+  -moz-animation: successAnim 0.8s;
+  -ms-animation: successAnim 0.8s;
+  -o-animation: successAnim 0.8s;
+  animation: successAnim 0.8s;
+}
