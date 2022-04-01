@@ -160,8 +160,6 @@ bodyWidth = body.offsetWidth
 bodyHeight = body.offsetHeight
 
 popup1 = document.getElementById('popup_1')
-popup1.style.width = bodyWidth + 'px'
-popup1.style.height = bodyHeight + 'px'
 
 gallery = document.getElementById('gallery')
 
