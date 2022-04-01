@@ -297,7 +297,7 @@ tgPhone3 = document.getElementById('tg_phone3')
 tgBtn3 = document.getElementById('phone_btn2')
 
 
-tgForm1.addEventListener('submit', async (e) => {
+tgForm1.addEventListener('submit', (e) => {
   e.preventDefault()
   
   nameVal = tgName1.value
@@ -317,7 +317,7 @@ tgForm1.addEventListener('submit', async (e) => {
     return
   }
 
-  token = '5115966698:AAExozsusCsk6k5ZKXkVSJYx6FAkjLsCMxU'
+  token = '5174707375:AAEQ6GGODXxXcCQZ3GIWxEuLF8IiC_GE87A'
   chatId = '1716833128'
   
   data = {
@@ -329,11 +329,10 @@ tgForm1.addEventListener('submit', async (e) => {
   
   url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`
 
-  const res = await fetch(url, {
+  const res = fetch(url, {
     method: 'POST',
   })
 
-  console.log(res)
   
 
   tgBtn1.classList.add('successBtnAnim')
@@ -345,7 +344,7 @@ tgForm1.addEventListener('submit', async (e) => {
 
 })
 
-tgForm2.addEventListener('submit', async (e) => {
+tgForm2.addEventListener('submit', (e) => {
   e.preventDefault()
   
   nameVal = tgName2.value
@@ -365,7 +364,7 @@ tgForm2.addEventListener('submit', async (e) => {
     return
   }
 
-  token = '5115966698:AAExozsusCsk6k5ZKXkVSJYx6FAkjLsCMxU'
+  token = '5174707375:AAEQ6GGODXxXcCQZ3GIWxEuLF8IiC_GE87A'
   chatId = '1716833128'
   
   data = {
@@ -377,11 +376,10 @@ tgForm2.addEventListener('submit', async (e) => {
   
   url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`
 
-  const res = await fetch(url, {
+  const res = fetch(url, {
     method: 'POST',
   })
 
-  console.log(res)
   
 
   tgBtn2.classList.add('successBtnAnim')
@@ -393,7 +391,7 @@ tgForm2.addEventListener('submit', async (e) => {
 
 })
 
-tgForm3.addEventListener('submit', async (e) => {
+tgForm3.addEventListener('submit', (e) => {
   e.preventDefault()
   
   nameVal = 'Нет имени'
@@ -413,7 +411,7 @@ tgForm3.addEventListener('submit', async (e) => {
     return
   }
 
-  token = '5115966698:AAExozsusCsk6k5ZKXkVSJYx6FAkjLsCMxU'
+  token = '5174707375:AAEQ6GGODXxXcCQZ3GIWxEuLF8IiC_GE87A'
   chatId = '1716833128'
   
   data = {
@@ -425,11 +423,10 @@ tgForm3.addEventListener('submit', async (e) => {
   
   url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`
 
-  const res = await fetch(url, {
+  const res = fetch(url, {
     method: 'POST',
   })
 
-  console.log(res)
   
 
   tgBtn3.classList.add('successBtnAnim')
