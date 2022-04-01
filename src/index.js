@@ -296,6 +296,10 @@ tgForm3 = document.getElementById('tg_form3')
 tgPhone3 = document.getElementById('tg_phone3')
 tgBtn3 = document.getElementById('phone_btn2')
 
+tgForm4 = document.getElementById('tg_form4')
+tgPhone4 = document.getElementById('tg_phone4')
+tgBtn4 = document.getElementById('tg_btn4')
+
 
 tgForm1.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -434,6 +438,55 @@ tgForm3.addEventListener('submit', (e) => {
   setTimeout(() => {
     tgBtn3.classList.remove('successBtnAnim')
     tgBtn3.disable = false
+  }, 800)
+
+})
+
+
+
+tgForm4.addEventListener('submit', (e) => {
+  e.preventDefault()
+  
+  nameVal = 'Нет имени'
+  phoneVal = tgPhone4.value
+
+  if (tgBtn4.disable === true) return
+  tgBtn4.disable = true
+
+  if (phoneVal.length !== 16) {
+    tgBtn4.classList.add('errorBtnAnim')
+
+    setTimeout(() => {
+      tgBtn4.classList.remove('errorBtnAnim')
+      tgBtn4.disable = false
+    }, 500)
+
+    return
+  }
+
+  token = '5174707375:AAEQ6GGODXxXcCQZ3GIWxEuLF8IiC_GE87A'
+  chatId = '1716833128'
+  
+  data = {
+    name: nameVal,
+    phone: phoneVal
+  }
+
+  text = `Новая заявка%0AИмя: ${nameVal}%0AНомер: ${phoneVal}`
+  
+  url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`
+
+  const res = fetch(url, {
+    method: 'POST',
+  })
+
+  
+
+  tgBtn4.classList.add('successBtnAnim')
+
+  setTimeout(() => {
+    tgBtn4.classList.remove('successBtnAnim')
+    tgBtn4.disable = false
   }, 800)
 
 })
