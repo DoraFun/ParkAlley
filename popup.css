@@ -120,17 +120,15 @@
   outline: none;
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 200;
+  font-weight: 400;
+  padding-left: 9px;
   font-size: 19.0776px;
   line-height: 22px;
-
   background-color: #F9F9F9;
-
+  color: #565656;
   display: block;
-
   width: 265px;
   height: 58px;
-
   margin-top: 5.34px;
 }
 
@@ -141,6 +139,7 @@
 
 .popup_1-input::placeholder {
   padding-left: 5.72px;
+  font-weight: 200;
 }
 
 .popup_1-cond {  

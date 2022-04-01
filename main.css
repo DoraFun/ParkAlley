@@ -625,6 +625,7 @@ letter-spacing: 0.035em;
   flex-direction: column;
   min-height: 180px;
   width: 258px;
+  padding-left: 50px;
 }
 
 .text-32 {
@@ -657,14 +658,21 @@ letter-spacing: 0.035em;
 
 .line-4 {
   height: 1px;
-  left: 33px;
+  left: -9px;
   position: absolute;
   top: 0;
   width: 138px;
 }
 
-.phone {
-  left: 0;
+.phone1 {
+  left: -32px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 1px;
+}
+
+.phone2 {
+  left: -8px;
   letter-spacing: 0;
   position: absolute;
   top: 1px;
@@ -688,7 +696,7 @@ letter-spacing: 0.035em;
 
 .line-5 {
   height: 1px;
-  left: 27px;
+  left: 24px;
   position: absolute;
   top: 0;
   width: 138px;
@@ -811,6 +819,8 @@ letter-spacing: 0.035em;
   letter-spacing: 0;
   position: absolute;
   top: 267px;
+  font-variant: small-caps;
+
 }
 
 .text-43 {
@@ -852,6 +862,16 @@ letter-spacing: 0.035em;
   letter-spacing: 0;
   position: absolute;
   top: 353px;
+  
+
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 27px;
+/* identical to box height */
+
+font-variant: small-caps;
 }
 
 .text-46 {
@@ -859,6 +879,14 @@ letter-spacing: 0.035em;
   letter-spacing: 0;
   position: absolute;
   top: 267px;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 27px;
+/* identical to box height */
+
+font-variant: small-caps;
 }
 
 .rectangle-32 {
@@ -1060,7 +1088,7 @@ font-weight: 300;
 font-size: 30px;
 line-height: 35px;
 padding-left: 9px;
-color: #aeaeae;
+color: #565656;
 }
 
 .rectangle-23:focus {
@@ -1218,10 +1246,13 @@ color: #aeaeae;
 }
 
 .span1-1 {
-  color: var(--white);
-  font-family: var(--font-family-roboto);
-  font-size: var(--font-size-xxxl);
-  font-weight: 300;
+  font-family: 'Roboto';
+    position: absolute;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 29px;
+    line-height: 34px;
+    color: #FFFFFF;
 }
 
 .text-15 {
@@ -1362,7 +1393,7 @@ font-weight: 300;
 font-size: 30px;
 line-height: 35px;
 padding-left: 9px;
-color: #aeaeae;
+color: #565656;
 }
 
 .rectangle-24::placeholder {
@@ -1493,7 +1524,7 @@ font-weight: 300;
 font-size: 30px;
 line-height: 35px;
 padding-left: 9px;
-color: #AEAEAE;
+color: #565656;
 }
 
 .rectangle-39:focus {
@@ -1710,7 +1741,7 @@ color: #AEAEAE;
   height: 4px;
   left: 195px;
   position: absolute;
-  top: 415px;
+  top: 430px;
   width: 388px;
 }
 
