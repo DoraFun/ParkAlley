@@ -321,8 +321,7 @@ tgForm1.addEventListener('submit', (e) => {
     return
   }
 
-  token = '5174707375:AAEQ6GGODXxXcCQZ3GIWxEuLF8IiC_GE87A'
-  chatId = '-689366724'
+
   
   data = {
     name: nameVal,
@@ -368,8 +367,7 @@ tgForm2.addEventListener('submit', (e) => {
     return
   }
 
-  token = '5174707375:AAEQ6GGODXxXcCQZ3GIWxEuLF8IiC_GE87A'
-  chatId = '-689366724'
+ 
   
   data = {
     name: nameVal,
@@ -414,10 +412,8 @@ tgForm3.addEventListener('submit', (e) => {
 
     return
   }
-
-  token = '5174707375:AAEQ6GGODXxXcCQZ3GIWxEuLF8IiC_GE87A'
-  chatId = '-689366724'
   
+ 
   data = {
     name: nameVal,
     phone: phoneVal
@@ -464,8 +460,8 @@ tgForm4.addEventListener('submit', (e) => {
     return
   }
 
-  token = '5174707375:AAEQ6GGODXxXcCQZ3GIWxEuLF8IiC_GE87A'
-  chatId = '-689366724'
+
+  
   
   data = {
     name: nameVal,
